@@ -2,38 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="spinners.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="spinners.css">
+    <script type="text/javascript" src="lissajous.js"></script>
     <title>"Spinner" Lissajous</title>
 </head>
 <body>
     <h1 class="page__header">Спиннеры</h1>
+
     <div class="lissajous">
         <h2 class="lissajous__header">Спиннеры на основе фигур Лиссажу</h2>
-        <!--<div class="lissajous__box">
-            <div class="lissajous__box__ordinary"></div>
-        </div>-->
         <div class="lissajous__box">
-            <div class="lissajous__box__phased--1"></div>
-            <div class="lissajous__box__phased--2"></div>
-            <div class="lissajous__box__phased--3"></div>
-            <div class="lissajous__box__phased--4"></div>
-            <div class="lissajous__box__phased--5"></div>
-            <div class="lissajous__box__phased--6"></div>
+            <canvas class="lissajous__canvas--1x1" width="140" height="140"></canvas>
         </div>
         <div class="lissajous__box">
-            <div class="lissajous__box__1x2--1"></div>
-            <div class="lissajous__box__1x2--2"></div>
-            <div class="lissajous__box__1x2--3"></div>
-            <div class="lissajous__box__1x2--4"></div>
-            <div class="lissajous__box__1x2--5"></div>
-            <div class="lissajous__box__1x2--6"></div>
-            <div class="lissajous__box__1x2--7"></div>
+            <canvas class="lissajous__canvas--1x2" width="140" height="140"></canvas>
         </div>
         <div class="lissajous__box">
-            <div class="lissajous__box__1x3"></div>
+            <canvas class="lissajous__canvas--2x3" width="140" height="140"></canvas>
         </div>
+        <div class="lissajous__box">
+            <canvas class="lissajous__canvas--3x4" width="140" height="140"></canvas>
+        </div>
+        <br>
+        <a href="https://jsfiddle.net/Potravnyi/j9g96ovw/" class="lissajous__box">JSFiddle</a>
+        <a href="https://jsfiddle.net/Potravnyi/enquow6s/" class="lissajous__box">JSFiddle</a>
+        <a href="https://jsfiddle.net/Potravnyi/uak818go/" class="lissajous__box">JSFiddle</a>
+        <a href="https://jsfiddle.net/Potravnyi/abvbbt4v/" class="lissajous__box">JSFiddle</a>
     </div>
+
     <div class="multielement">
         <h2 class="multielement__header">Спиннеры на основе нескольких DOM элементов</h2>
         <div class="multielement__box">
@@ -63,6 +60,7 @@
                 <div class="win10__dot7-from7"></div>
         </div>
     </div>
+
     <div class="singleelement">
         <h2 class="multielement__header">Спиннеры на основе одного DOM элемента</h2>
         <div class="singleelement__box">
