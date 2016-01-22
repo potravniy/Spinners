@@ -256,3 +256,28 @@ a.lissajous__box {
     border-radius: 50%;
     box-shadow: 0 -2.5em #bbb, -2.165em 1.25em #bbb, 2.165em 1.25em #bbb, 0 2.5em #bbb, 2.165em -1.25em #bbb, -2.165em -1.25em #bbb; 
 }
+
+@keyframes shadow {
+    100%,
+    0%  {   text-shadow: 0 0 3px transparent;  }
+    50% {   text-shadow: 0 0 3px #fff;       }
+}
+
+.singleelement__text {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 140%;
+    color: transparent;
+    animation: shadow 1s 0.333s ease-out infinite;
+}
+.singleelement__text:before {
+    content: "loa";
+    color: transparent;
+    animation: shadow 1s 0.000s ease-out infinite;
+}
+.singleelement__text:after {
+    content: "g...";
+    color: transparent;
+    animation: shadow 1s 0.666s ease-out infinite;
+}
