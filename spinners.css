@@ -64,8 +64,57 @@ a.lissajous__box {
     border: 1px solid #555;
     background-color: transparent;
     font-size: 20px;
+    text-align: center;
     vertical-align: middle;
 }
+
+.multielement__box__letter {
+    display: inline-block;
+    height: 100%;
+    line-height: 140px;
+    vertical-align: middle;
+    font-size: 1.5em;
+    color: transparent;
+    text-shadow: none;
+}
+@-webkit-keyframes multielement__box__letter {
+    0%  {   text-shadow: 0 0 20px white;    }
+    10% {   text-shadow: 0 0 3px  white;    }
+    20% {   text-shadow: 0 0 1px  white;    }
+    30% {   text-shadow: 0 0 3px  white;    }
+    40% {   text-shadow: 0 0 20px white;    }
+    50% {   text-shadow: none;                 }
+}
+@keyframes multielement__box__letter {
+    0%  {   text-shadow: 0 0 20px white;    }
+    10% {   text-shadow: 0 0 3px  white;    }
+    20% {   text-shadow: 0 0 1px  white;    }
+    30% {   text-shadow: 0 0 3px  white;    }
+    40% {   text-shadow: 0 0 20px white;    }
+    50% {   text-shadow: none;                 }
+}
+.multielement__box__letter.letter1-from7 {
+    animation: multielement__box__letter 2s 0.1s linear infinite;
+}
+.multielement__box__letter.letter2-from7 {
+    animation: multielement__box__letter 2s 0.2s linear infinite;
+}
+.multielement__box__letter.letter3-from7 {
+    animation: multielement__box__letter 2s 0.3s linear infinite;
+}
+.multielement__box__letter.letter4-from7 {
+    animation: multielement__box__letter 2s 0.4s linear infinite;
+}
+.multielement__box__letter.letter5-from7 {
+    animation: multielement__box__letter 2s 0.5s linear infinite;
+}
+.multielement__box__letter.letter6-from7 {
+    animation: multielement__box__letter 2s 0.6s linear infinite;
+}
+.multielement__box__letter.letter7-from7 {
+    animation: multielement__box__letter 2s 0.7s linear infinite;
+}
+
 
 /* Chrome, Safari, Opera */ 
 @-webkit-keyframes multielement__box__rotor--rotate {
@@ -97,32 +146,46 @@ a.lissajous__box {
     width: 20px;
     height: 20px;
 }
-.multielement__box__rotor__dot1-from3,
 .multielement__box__rotor__dot1-from6 {
-    left: calc(50% - 10px);
-    top: -10px;
+    left: 50%;
+        -ms-transform: -ms-translate(-10px, -10px); /* IE 9 */
+        -webkit-transform: -webkit-translate(-10px, -10px); /* Chrome, Safari, Opera */
+    transform: translate(-10px, -10px);
 }
-.multielement__box__rotor__dot2-from3,
 .multielement__box__rotor__dot2-from6 {
-    left: calc(93.3% - 10px);
-    top: calc(75% - 10px);
+    left: 93.3%;
+    top: 75%;
+        -ms-transform: -ms-translate(-10px, -10px); /* IE 9 */
+        -webkit-transform: -webkit-translate(-10px, -10px); /* Chrome, Safari, Opera */
+    transform: translate(-10px, -10px);
 }
-.multielement__box__rotor__dot3-from3,
 .multielement__box__rotor__dot3-from6 {
-    left: calc(6.7% - 10px);
-    top: calc(75% - 10px);
+    left: 6.7%;
+    top: 75%;
+        -ms-transform: -ms-translate(-10px, -10px); /* IE 9 */
+        -webkit-transform: -webkit-translate(-10px, -10px); /* Chrome, Safari, Opera */
+    transform: translate(-10px, -10px);
 }
 .multielement__box__rotor__dot4-from6 {
-    left: calc(50% - 10px);
-    top: calc(100% - 10px);
+    left: 50%;
+    top: 100%;
+        -ms-transform: -ms-translate(-10px, -10px); /* IE 9 */
+        -webkit-transform: -webkit-translate(-10px, -10px); /* Chrome, Safari, Opera */
+    transform: translate(-10px, -10px);
 }
 .multielement__box__rotor__dot5-from6 {
-    left: calc(93.3% - 10px);
-    top: calc(25% - 10px);
+    left: 93.3%;
+    top: 25%;
+        -ms-transform: -ms-translate(-10px, -10px); /* IE 9 */
+        -webkit-transform: -webkit-translate(-10px, -10px); /* Chrome, Safari, Opera */
+    transform: translate(-10px, -10px);
 }
 .multielement__box__rotor__dot6-from6 {
-    left: calc(6.7% - 10px);
-    top: calc(25% - 10px);
+    left: 6.7%;
+    top: 25%;
+        -ms-transform: -ms-translate(-10px, -10px); /* IE 9 */
+        -webkit-transform: -webkit-translate(-10px, -10px); /* Chrome, Safari, Opera */
+    transform: translate(-10px, -10px);
 }
 
 .multielement__box--win10 > * {
@@ -257,27 +320,3 @@ a.lissajous__box {
     box-shadow: 0 -2.5em #bbb, -2.165em 1.25em #bbb, 2.165em 1.25em #bbb, 0 2.5em #bbb, 2.165em -1.25em #bbb, -2.165em -1.25em #bbb; 
 }
 
-@keyframes shadow {
-    100%,
-    0%  {   text-shadow: 0 0 3px transparent;  }
-    50% {   text-shadow: 0 0 3px #fff;       }
-}
-
-.singleelement__text {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-    font-size: 140%;
-    color: transparent;
-    animation: shadow 1s 0.333s ease-out infinite;
-}
-.singleelement__text:before {
-    content: "loa";
-    color: transparent;
-    animation: shadow 1s 0.000s ease-out infinite;
-}
-.singleelement__text:after {
-    content: "g...";
-    color: transparent;
-    animation: shadow 1s 0.666s ease-out infinite;
-}
