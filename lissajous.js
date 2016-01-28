@@ -16,7 +16,7 @@ window.onload = function(){
             ctx.clearRect(1, 1, 138, 138);
             ctx.beginPath();
             ctx.lineWidth="2";
-            ctx.strokeStyle="#bbb";
+            ctx.strokeStyle="#fff";
             for (var step = 0; step <= 120; step++) {
                 var x = 70 + 50 * Math.cos(1 * Math.PI * step / 60);
                 var y = 70 + 50 * Math.sin(1 * Math.PI * step / 60 + timestamp/300);
@@ -34,7 +34,7 @@ window.onload = function(){
             ctx.clearRect(1, 1, 138, 138);
             ctx.beginPath();
             ctx.lineWidth="2";
-            ctx.strokeStyle="#bbb";
+            ctx.strokeStyle="#fff";
             for (var step = 0; step <= 120; step++) {
                 var x = 70 + 50 * Math.cos(1 * Math.PI * step / 60);
                 var y = 70 + 50 * Math.sin(2 * Math.PI * step / 60 + timestamp/300);
@@ -52,7 +52,7 @@ window.onload = function(){
             ctx.clearRect(1, 1, 138, 138);
             ctx.beginPath();
             ctx.lineWidth="2";
-            ctx.strokeStyle="#bbb";
+            ctx.strokeStyle="#fff";
             for (var step = 0; step <= 120; step++) {
                 var x = 70 + 50 * Math.cos(2 * Math.PI * step / 60);
                 var y = 70 + 50 * Math.sin(3 * Math.PI * step / 60 + timestamp/300);
@@ -70,7 +70,7 @@ window.onload = function(){
             ctx.clearRect(1, 1, 138, 138);
             ctx.beginPath();
             ctx.lineWidth="2";
-            ctx.strokeStyle="#bbb";
+            ctx.strokeStyle="#fff";
             for (var step = 0; step <= 120; step++) {
                 var x = 70 + 50 * Math.cos(3 * Math.PI * step / 60);
                 var y = 70 + 50 * Math.sin(4 * Math.PI * step / 60 + timestamp/300);

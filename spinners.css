@@ -3,30 +3,95 @@
 *:before {
     box-sizing: border-box;
 }
-
+html {
+    height: 100%;
+}
 body {
-    background-image: url("bg.png");
+    position: relative;
+    height: 100%;
+    /*  Background origin is here:  http://lea.verou.me/css3patterns/#cicada-stripes  */
+    background-color: #888;
+    background-image:   -webkit-linear-gradient(left, rgba(255,255,255,.07) 50%, transparent 50%),
+                        -webkit-linear-gradient(left, rgba(255,255,255,.13) 50%, transparent 50%),
+                        -webkit-linear-gradient(left, transparent 50%, rgba(255,255,255,.17) 50%),
+                        -webkit-linear-gradient(left, transparent 50%, rgba(255,255,255,.19) 50%);
+    background-image:   -o-linear-gradient(left, rgba(255,255,255,.07) 50%, transparent 50%),
+                        -o-linear-gradient(left, rgba(255,255,255,.13) 50%, transparent 50%),
+                        -o-linear-gradient(left, transparent 50%, rgba(255,255,255,.17) 50%),
+                        -o-linear-gradient(left, transparent 50%, rgba(255,255,255,.19) 50%);
+    background-image:   linear-gradient(to right, rgba(255,255,255,.07) 50%, transparent 50%),
+                        linear-gradient(to right, rgba(255,255,255,.13) 50%, transparent 50%),
+                        linear-gradient(to right, transparent 50%, rgba(255,255,255,.17) 50%),
+                        linear-gradient(to right, transparent 50%, rgba(255,255,255,.19) 50%);;
+    background-size: 13px, 29px, 37px, 53px;
+}
+header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    background-color: #346;
+    box-shadow: 0 3px 3px #8ac;
+    z-index: 10;
 }
 .page__header {
-    color: white;
     text-align: center;
-    font-size: 32px;
+    color: white;
+    font-size: 62px;
+    text-shadow: 2px 3px 0 black;
     margin: 20px auto;
+}
+ul {
+    text-align: center;
+}
+.menu {
+    display: inline-block;
+    vertical-align: middle;
+    height: 35px;
+    margin: 10px 30px 20px;
+}
+.menu__a {
+    height: 100%;
+    padding: 10px 20px;
+    line-height: 25px;
+    font-size: 25px;
+    color: black;
+    background: linear-gradient(to bottom, #ccc, #666);
+    border-radius: 10px;
+    text-decoration: none;
+}
+.menu__a:hover {
+    text-decoration: underline;
+}
+.menu__a:active {
+    background: linear-gradient(to bottom, #666, #ccc);
 }
 
 .lissajous,
 .multielement,
 .singleelement {
     text-align: center;
-    background-color: transparent;
-    margin: 30px auto;
+    height: 100%;
+    border: 1px solid transparent;
+    background-clip: border-box;
+}
+.lissajous {
+    background-color: rgba(134,175,211,.5);
+}
+.multielement {
+    background-color: rgba(140,164,125,.5);
+}
+.singleelement {
+    background-color: rgba(221,199,138,.5);
 }
 .lissajous__header,
-.multielement__header {
-    color: white;
+.multielement__header,
+.singleelement__header {
+    color: black;
     text-align: center;
-    font-size: 24px;
-    margin: 10px;
+    font-size: 32px;
+    margin-top: 13%;
+    margin-bottom: 7%;
 }
 .lissajous__box {
     display: inline-block;
@@ -35,7 +100,7 @@ body {
     height: 142px;
     padding: 0;
     margin: 20px;
-    border: 1px solid #555;
+    border: 1px solid #888;
 }
 
 .lissajous__canvas {
@@ -43,12 +108,13 @@ body {
     width: 140px;
     height: 140px;
 }
-a.lissajous__box {
-    height: 20px;
+.lissajous__p {
+    line-height: 32px;
+    font-size: 24px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.5);;
-    margin-top: 0;
+    margin-top: 10%;
+    background: transparent;
+    color: black;
 }
 
 .multielement__box,
@@ -61,7 +127,7 @@ a.lissajous__box {
     height: 142px;
     padding: 0;
     margin: 20px;
-    border: 1px solid #555;
+    border: 1px solid #888;
     background-color: transparent;
     font-size: 20px;
     text-align: center;
@@ -78,20 +144,22 @@ a.lissajous__box {
     text-shadow: none;
 }
 @-webkit-keyframes multielement__box__letter {
-    0%  {   text-shadow: 0 0 20px white;    }
-    10% {   text-shadow: 0 0 3px  white;    }
-    20% {   text-shadow: 0 0 1px  white;    }
-    30% {   text-shadow: 0 0 3px  white;    }
-    40% {   text-shadow: 0 0 20px white;    }
-    50% {   text-shadow: none;                 }
+    0%  {   text-shadow: 0 0 20px #123487;    }
+    10% {   text-shadow: 0 0 3px  #123487;    }
+    20% {   text-shadow: 0 0 2px  #123487;    }
+    30% {   text-shadow: 0 0 2px  #123487;    }
+    40% {   text-shadow: 0 0 3px  #123487;    }
+    50% {   text-shadow: 0 0 20px #123487;    }
+    60% {   text-shadow: none;                 }
 }
 @keyframes multielement__box__letter {
-    0%  {   text-shadow: 0 0 20px white;    }
-    10% {   text-shadow: 0 0 3px  white;    }
-    20% {   text-shadow: 0 0 1px  white;    }
-    30% {   text-shadow: 0 0 3px  white;    }
-    40% {   text-shadow: 0 0 20px white;    }
-    50% {   text-shadow: none;                 }
+    0%  {   text-shadow: 0 0 20px #123487;    }
+    10% {   text-shadow: 0 0 3px  #123487;    }
+    20% {   text-shadow: 0 0 2px  #123487;    }
+    30% {   text-shadow: 0 0 2px  #123487;    }
+    40% {   text-shadow: 0 0 3px  #123487;    }
+    50% {   text-shadow: 0 0 20px #123487;    }
+    60% {   text-shadow: none;                 }
 }
 .multielement__box__letter.letter1-from7 {
     animation: multielement__box__letter 2s 0.1s linear infinite;
@@ -140,7 +208,7 @@ a.lissajous__box {
     margin: 0 auto;
     border-radius: 50%;
     background: white;
-    box-shadow: inset 0 0 10px #000;
+    box-shadow: inset 0 0 10px #00c;
 }
 .multielement__box--six-balls .multielement__box__rotor > * {
     width: 20px;
@@ -204,7 +272,7 @@ a.lissajous__box {
     left: calc(50% - 5px);
     top: 15px;
     background: white;
-    box-shadow: inset 0 0 6px #000;
+    box-shadow: inset 0 0 6px #00c;
 }
 
 /* Chrome, Safari, Opera */ 
@@ -240,6 +308,24 @@ a.lissajous__box {
     animation: rotate 2s 1.2s cubic-bezier(.74,.25,.25,.75) infinite;
 }
 
+.multielement__p,
+.singleelement__p {
+    line-height: 32px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 3%;
+    background: transparent;
+    color: black;
+}
+.multielement__p__a,
+.singleelement__p__a {
+    display: inline-block;
+    width: 142px;
+    height: 35px;
+    margin: 0 20px;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 10px;
+}
 .singleelement__box .moon {
     position: relative;
     width: 100px;
@@ -247,7 +333,7 @@ a.lissajous__box {
     margin: 20px;
     background-color: transparent;
     border-radius: 50%;
-    box-shadow: inset 10px 0 #bbb;
+    box-shadow: inset 10px 0 white;
     animation: rotate 1.5s linear infinite;
 }
 
@@ -257,6 +343,7 @@ a.lissajous__box {
     height: 100px;
     margin: 20px;
     background-color: transparent;
+    background-clip: padding-box;
     border: 10px solid transparent;
     border-radius: 50%;
 }
@@ -269,17 +356,19 @@ a.lissajous__box {
     top: -10px;
     left: -10px;
     margin: 0;
-    background-color: transparent;
-    border: 10px solid transparent;
-    border-left-color: #bbb;
-    border-top-color: #bbb;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 50%;
 }
+
 .singleelement__box .classic:before {
-    animation: rotate 1.5s ease-in-out infinite;
+    background-image: url("angle_gradient_left.png");
+    animation: rotate 1.7s linear reverse infinite;
 }
 .singleelement__box .classic:after {
-    animation: rotate 1.5s 0.45s ease-in-out infinite;
+    background-image: url("angle_gradient_right.png");
+    animation: rotate 1.2s linear normal infinite;
 }
 
 
@@ -296,8 +385,7 @@ a.lissajous__box {
     100% {  font-size: 100%;   transform: rotate(360deg); }
 }
 
-.singleelement__box .pulsar,
-.singleelement__box .singleelement__win10 {
+.singleelement__box .pulsar {
     position: relative;
     width: 100%;
     height: 100%;
@@ -317,6 +405,5 @@ a.lissajous__box {
     margin: auto;
     background-color: transparent;
     border-radius: 50%;
-    box-shadow: 0 -2.5em #bbb, -2.165em 1.25em #bbb, 2.165em 1.25em #bbb, 0 2.5em #bbb, 2.165em -1.25em #bbb, -2.165em -1.25em #bbb; 
+    box-shadow: 0 -2.5em #fff, -2.165em 1.25em #fff, 2.165em 1.25em #fff, 0 2.5em #fff, 2.165em -1.25em #fff, -2.165em -1.25em #fff; 
 }
-

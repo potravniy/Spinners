@@ -8,9 +8,16 @@
     <title>"Spinner" Lissajous</title>
 </head>
 <body>
-    <h1 class="page__header">Спиннеры</h1>
-
-    <div class="lissajous">
+    <header>
+        <h1 class="page__header">Спиннеры</h1>
+        <ul>
+            <li class="menu"><a class="menu__a" href="#lissajous">Лиссажу</a></li>
+            <li class="menu"><a class="menu__a" href="#multielement">Многоэлементные</a></li>
+            <li class="menu"><a class="menu__a" href="#singleelement">Одноэлементные</a></li>
+        </ul>
+    </header>
+    
+    <div class="lissajous" id="lissajous">
         <h2 class="lissajous__header">Спиннеры на основе фигур Лиссажу</h2>
         <div class="lissajous__box">
             <canvas class="lissajous__canvas--1x1" width="140" height="140"></canvas>
@@ -24,14 +31,14 @@
         <div class="lissajous__box">
             <canvas class="lissajous__canvas--3x4" width="140" height="140"></canvas>
         </div>
-        <br>
-        <a href="https://jsfiddle.net/Potravnyi/j9g96ovw/" class="lissajous__box">JSFiddle</a>
-        <a href="https://jsfiddle.net/Potravnyi/enquow6s/" class="lissajous__box">JSFiddle</a>
-        <a href="https://jsfiddle.net/Potravnyi/uak818go/" class="lissajous__box">JSFiddle</a>
-        <a href="https://jsfiddle.net/Potravnyi/abvbbt4v/" class="lissajous__box">JSFiddle</a>
+        <p class="lissajous__p">
+            Посмотреть больше вариантов фигур Лиссажу<br>
+            с разными коэффициентами по осям х и у<br>можно здесь: 
+            <a href="https://jsfiddle.net/Potravnyi/g1qwcs7n/" target="_blank">JSFiddle</a>
+        </p>
     </div>
-
-    <div class="multielement">
+    
+    <div class="multielement" id="multielement">
         <h2 class="multielement__header">Спиннеры на основе нескольких DOM элементов</h2>
         <div class="multielement__box">
             <div class="multielement__box__letter letter1-from7">l</div>
@@ -61,10 +68,15 @@
                 <div class="win10__dot6-from7"></div>
                 <div class="win10__dot7-from7"></div>
         </div>
+        <p class="multielement__p">
+            <a href="https://jsfiddle.net/Potravnyi/b1xw01eu/" class="multielement__p__a" target="_blank">JSFiddle</a>
+            <a href="https://jsfiddle.net/Potravnyi/nwz6ngje/" class="multielement__p__a" target="_blank">JSFiddle</a>
+            <a href="https://jsfiddle.net/Potravnyi/kj3ma62y/" class="multielement__p__a" target="_blank">JSFiddle</a>
+        </p>
     </div>
 
-    <div class="singleelement">
-        <h2 class="multielement__header">Спиннеры на основе одного DOM элемента</h2>
+    <div class="singleelement" id="singleelement">
+        <h2 class="singleelement__header">Спиннеры на основе одного DOM элемента</h2>
         <div class="singleelement__box">
             <div class="moon"></div>
         </div>
@@ -74,11 +86,12 @@
         <div class="singleelement__box">
             <div class="pulsar"></div>
         </div>
-        <!--<div class="singleelement__box">
-            <div class="singleelement__text">din</div>
-        </div>-->
-        
-        
+        <p class="singleelement__p">
+            <a href="https://jsfiddle.net/Potravnyi/zrp4mdbf/" class="singleelement__p__a" target="_blank">JSFiddle</a>
+            <a href="https://jsfiddle.net/Potravnyi/art1c9zn/" class="singleelement__p__a" target="_blank">JSFiddle</a>
+            <a href="https://jsfiddle.net/Potravnyi/vjv91j5w/" class="singleelement__p__a" target="_blank">JSFiddle</a>
+        </p>
     </div>
+    
 </body>
 </html>
