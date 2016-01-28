@@ -1,0 +1,1 @@
+You can find here a handful of spinners. Three kind od spinners are represented here: Lissajous, multi element and sindle element. Some of them you've seen earlier but some of them you'll have seen the first time I hope. Pleasant viewing!  
