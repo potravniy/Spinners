@@ -9,7 +9,7 @@ html {
 body {
     position: relative;
     height: 100%;
-    /*  Background origin is here:  http://lea.verou.me/css3patterns/#cicada-stripes  */
+    /*  Background adopted from  http://lea.verou.me/css3patterns/#cicada-stripes  */
     background-color: #888;
     background-image:   -webkit-linear-gradient(left, rgba(255,255,255,.07) 50%, transparent 50%),
                         -webkit-linear-gradient(left, rgba(255,255,255,.13) 50%, transparent 50%),
@@ -56,7 +56,7 @@ ul {
     line-height: 25px;
     font-size: 25px;
     color: black;
-    background: linear-gradient(to bottom, #ccc, #666);
+    background: linear-gradient(to bottom, #aaa, #777);
     border-radius: 10px;
     text-decoration: none;
 }
@@ -64,7 +64,7 @@ ul {
     text-decoration: underline;
 }
 .menu__a:active {
-    background: linear-gradient(to bottom, #666, #ccc);
+    background: linear-gradient(to bottom, #777, #aaa);
 }
 
 .lissajous,
@@ -324,7 +324,7 @@ ul {
     height: 35px;
     margin: 0 20px;
     background-color: rgba(255,255,255,.3);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .singleelement__box .moon {
     position: relative;
